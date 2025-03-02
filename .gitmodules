@@ -1,0 +1,6 @@
+[submodule "source/dotfiles/nvim"]
+	path = source/dotfiles/nvim
+	url = git@github.com:cynex0/kickstart-modular.nvim.git
+[submodule "source/dotfiles/kickstart-modular.nvim"]
+	path = source/dotfiles/kickstart-modular.nvim
+	url = git@github.com:cynex0/kickstart-modular.nvim.git

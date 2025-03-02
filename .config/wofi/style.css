@@ -1,0 +1,61 @@
+@define-color bg1 rgba(0,0,0,0.78);
+@define-color bg2 rgba(63, 64, 49, 0.75);
+@define-color highlight #b8be1d;
+@define-color text #f8f8f2;
+
+window {
+  margin: 0px;
+  border: 1px solid @highlight;
+  border-radius: 12px;
+  background-color: @bg1;
+}
+
+#input {
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  color: @text;
+  background-color: @bg2;
+}
+
+#inner-box {
+  margin: 5px;
+  border: none;
+}
+
+#outer-box {
+  margin: 5px;
+  border: none;
+}
+
+#scroll {
+  margin: 0px;
+  border: none;
+}
+
+#text {
+  margin: 5px;
+  border: none;
+  color: @text;
+} 
+
+#entry.activatable #text {
+  color: @bg1;
+}
+
+#entry {
+  border-radius: 8px;
+}
+
+#entry > * {
+  color: @text;
+}
+
+#entry:selected {
+  background-color: @bg2;
+  outline: none;
+}
+
+#entry:selected #text {
+  font-weight: bold;
+}

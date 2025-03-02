@@ -1,0 +1,13 @@
+mode=drun
+
+width=40%
+lines=11
+
+hide_scroll = true
+allow_images = true
+image_size = 18
+prompt=Search...
+normal_window = false
+
+matching=fuzzy
+insensitive=true
