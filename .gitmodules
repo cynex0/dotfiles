@@ -1,3 +1,0 @@
-[submodule "source/dotfiles/.config/nvim"]
-	path = source/dotfiles/.config/nvim
-	url = git@github.com:cynex0/kickstart-modular.nvim.git
