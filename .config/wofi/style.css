@@ -1,11 +1,11 @@
 @define-color bg1 rgba(0,0,0,0.78);
-@define-color bg2 rgba(63, 64, 49, 0.75);
-@define-color highlight #b8be1d;
+@define-color bg2 rgba(76, 92, 76, 0.5);
+@define-color highlight rgba(161, 203, 161, 0.6);
 @define-color text #f8f8f2;
 
 window {
   margin: 0px;
-  border: 1px solid @highlight;
+  border: 2px solid @highlight;
   border-radius: 12px;
   background-color: @bg1;
 }

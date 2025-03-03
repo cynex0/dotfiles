@@ -14,31 +14,15 @@
  * Import Pywal colors 
  * ----------------------------------------------------- */
 /* @import 'style-light.css'; */
-@define-color backgroundlight #FFFFFF;
-@define-color backgrounddark #FFFFFF;
-@define-color workspacesbackground1 #FFFFFF;
-@define-color workspacesbackground2 #CCCCCC;
-@define-color bordercolor #FFFFFF;
-@define-color textcolor1 #000000;
-@define-color textcolor2 #000000;
-@define-color textcolor3 #FFFFFF;
-@define-color iconcolor #FFFFFF;
 
-@define-color backgroundlight #585A2D;
-@define-color backgrounddark rgba(63, 64, 49, 0.75);
-@define-color backgroundtooltip rgba(0,0,0,0.81); 
-@define-color backgroundinactive #2C2C29;
-@define-color workspacesbackground1 #878A25;
-@define-color workspacesbackground2 #777A28;
-@define-color bordercolor #676A2A;
-@define-color textcolor1 #B8BE1D;
-@define-color textcolor2 #A7AC20;
-@define-color textcolor3 #989C22;
-@define-color iconcolor #4A4A2F;
-@define-color activebordercolor #373732;
+@define-color backgroundlight #4C5C4C;
+@define-color backgrounddark #282828;
+@define-color backgroundtooltip #1F281F; 
 
 @define-color textcolor1 #B9B9A8;
 @define-color textcolor2 #969676;
+@define-color textcolor3 #4C5C4C;
+@define-color iconcolor #4f4f4f;
 /* -----------------------------------------------------
  * General 
  * ----------------------------------------------------- */
@@ -51,7 +35,7 @@
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0.966);
+    background-color: rgba(0,0,0,0.91);
     border-bottom: 0px solid #ffffff;
     /* color: #FFFFFF; */
     transition-property: background-color;
@@ -78,7 +62,7 @@ window#waybar {
     border-radius: 15px;
     padding: 0px 8px;
     border: 0px;
-    color: @textcolor2;
+    color: @textcolor1;
     transition: all 0.3s ease-in-out;
 }
 
@@ -497,7 +481,7 @@ label:focus {
 }
 
 #custom-toggle-conservation {
-    color: @textcolor2;
+    color: @textcolor1;
     margin-left: 15px;
     margin-right: 0px;
 }
