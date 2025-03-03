@@ -6,7 +6,9 @@
 
 ---
 ## Showcase
-`TODO`
+![Desktop with fastfetch](./source/dotfiles/img/fastfetch.png)
+![Desktop with wofi](./source/dotfiles/img/wofi.png)
+![Neovim](./source/dotfiles/img/nvim.png)
 
 ## Components
 - Compistor/WM: [`hyprland`](https://github.com/hyprwm/Hyprland)
