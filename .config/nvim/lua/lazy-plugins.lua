@@ -56,7 +56,16 @@ require('lazy').setup({
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
 
-  require 'custom.plugins',
+  -- Own plugins
+  require 'custom.plugins.cinnamon',
+  -- require 'custom.plugins.codeium',
+  require 'custom.plugins.git-fugitive',
+  require 'custom.plugins.harpoon',
+  require 'custom.plugins.harpoon-tabline',
+  -- require 'custom.plugins.minimap',
+  require 'custom.plugins.llama',
+
+  -- Theme
   require 'themes/kanagawa',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
