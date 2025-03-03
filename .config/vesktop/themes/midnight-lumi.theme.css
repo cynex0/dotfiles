@@ -46,10 +46,10 @@
 	--text-5: hsl(135, 8%, 30%); /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
-	--bg-1: hsl(135, 8%, 18%); /* dark buttons when clicked */
-	--bg-2: hsl(135, 8%, 14%); /* dark buttons */
-	--bg-3: hsl(135, 8%, 11%); /* spacing, secondary elements */
-	--bg-4: hsl(135, 8%, 8%); /* main background color */
+	--bg-1: hsl(135, 8%, 22%); /* dark buttons when clicked */
+	--bg-2: hsl(135, 8%, 18%); /* dark buttons */
+	--bg-3: hsl(135, 8%, 14%); /* spacing, secondary elements */
+	--bg-4: hsl(135, 8%, 7%); /* main background color (darker for more contrast) */
 	--hover: hsla(135, 15%, 30%, 0.1); /* channels and buttons when hovered */
 	--active: hsla(135, 15%, 30%, 0.2); /* channels and buttons when clicked or selected */
 	--message-hover: hsla(135, 0%, 0%, 0.1); /* messages when hovered */
