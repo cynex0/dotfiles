@@ -34,18 +34,14 @@ map('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 map('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- [[Custom Keymaps]]
-
--- remap nvchad defaults
--- nomap("n", "<leader>pt")
--- nomap("n", "<leader>sh")
 map('n', 'Q', '<nop>') -- unmap Q
 
 -- map('n', ';', ':', { desc = 'CMD enter command mode' })
 map({ 'n', 'i', 'v' }, '<C-s>', '<cmd> w <cr>')
 --
 -- move lines down/up
-map('n', '<A-j>', ':m .+1<CR>==', { desc = 'Move line down' })
-map('n', '<A-k>', ':m .-2<CR>==', { desc = 'Move line up' })
+-- map('n', '<M-j>', ':m .+1<CR>==', { desc = 'Move line down' })
+-- map('n', '<M-k>', ':m .-2<CR>==', { desc = 'Move line up' })
 map('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selection down' })
 map('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selection up' })
 
