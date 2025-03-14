@@ -250,7 +250,7 @@
         "modules": [
             "power-profiles-daemon",
             "cpu",
-            "memory",
+            //"memory",
             "temperature",
         ]
     },

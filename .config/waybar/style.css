@@ -16,7 +16,7 @@
 /* @import 'style-light.css'; */
 
 @define-color backgroundlight #4C5C4C;
-@define-color backgrounddark #282828;
+@define-color backgrounddark #282A28;
 @define-color backgroundtooltip #1F281F; 
 
 @define-color textcolor1 #A8B9A8;
@@ -35,7 +35,7 @@
 }
 
 window#waybar {
-    background-color: rgba(0,0,0,0.91);
+    background-color: rgba(0,0,0,0.875);
     border-bottom: 0px solid #ffffff;
     /* color: #FFFFFF; */
     transition-property: background-color;
@@ -295,8 +295,8 @@ window#waybar.empty #window {
     background-color: @backgrounddark;
     color: @textcolor1;
     border-radius: 15px;
-    padding: 2px 15px 0px 15px;
-    margin: 5px 15px 5px 4px;
+    padding: 2px 10px 0px 12px;
+    margin: 5px 15px 5px 0px;
     font-style: normal;
 }
 
