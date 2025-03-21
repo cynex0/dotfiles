@@ -303,6 +303,7 @@
     "group/bat": {
         "orientation": "horizontal",
         "modules": [
+            "backlight",
             "battery",
             "custom/toggle-conservation",
         ]

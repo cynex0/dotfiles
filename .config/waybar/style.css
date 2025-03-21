@@ -337,12 +337,8 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #backlight {
-    background-color: @backgrounddark;
     color: @textcolor1;
-    border-radius: 15px;
-    padding: 2px 10px 0px 10px;
-    margin: 5px 15px 5px 0px;
-    font-weight: bolder;
+    margin-right: 12px;
 }
 
 /* -----------------------------------------------------
@@ -429,7 +425,6 @@ window#waybar.empty #window {
     border-radius: 15px;
     padding: 2px 2px 0px 10px;
     margin: 5px 15px 5px 0px;
-    font-weight: bolder;
 }
 
 @keyframes blink {
@@ -480,7 +475,7 @@ label:focus {
 
 #custom-toggle-conservation {
     color: @textcolor1;
-    margin-left: 15px;
+    margin-left: 12px;
     margin-right: 0px;
 }
 
