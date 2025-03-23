@@ -212,7 +212,7 @@
 
     // CPU
     "cpu": {
-        "format": " /{usage}% ",
+        "format": "  /{usage}% ",
         "on-click": "gnome-system-monitor -r"
     },
 
@@ -244,21 +244,27 @@
         "format": "{short}"
     },
 
-    // Group Hardware
-    "group/hardware": {
-        "orientation": "inherit",
-        "modules": [
-            "power-profiles-daemon",
+
+    "group/stats" : {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 300,
+            "transition-left-to-right": false,
+            "click-to-reveal" : true,
+        },        
+        "modules" : [
+            "custom/drawer-placeholder",
             "cpu",
-            //"memory",
+            "memory",
             "temperature",
-        ]
+        ],
     },
 
     "group/devices": {
         "orientation": "inherit",
         "modules": [
             "network",
+            "custom/separator",
             "bluetooth",
         ]
     },
@@ -300,10 +306,14 @@
         "on-click": "nm-connection-editor"
     },
 
-    "group/bat": {
+    "group/hardware": {
         "orientation": "horizontal",
         "modules": [
+            "group/stats",
+            "power-profiles-daemon",
+            "custom/separator",
             "backlight",
+            "custom/separator",
             "battery",
             "custom/toggle-conservation",
         ]
@@ -398,7 +408,7 @@
     },
 
     "power-profiles-daemon": {
-        "format": "{icon} 󱋱 ",
+        "format": "{icon}",
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
         "tooltip": true,
         "format-icons": {
@@ -425,5 +435,13 @@
         "exec": "swaync-client -swb",
         "on-click": "sleep 0.1; swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
+    },
+    "custom/separator" : {
+        "format" : "•",
+        "tooltip": false,
+    },
+    "custom/drawer-placeholder" : {
+        "format" : "󰄽 ",
+        "tooltip": false,
     },
 }
