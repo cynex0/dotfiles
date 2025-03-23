@@ -89,106 +89,12 @@
         "on-click-right": "hyprlock"
     },
 
-    // Updates Count
-    "custom/updates": {
-        "format": " {}",
-        "tooltip-format": "{}",
-        "escape": true,
-        "return-type": "json",       
-        "exec": "~/.config/ml4w/scripts/updates.sh",
-        "restart-interval": 60,
-        "on-click": "alacritty -e ~/.config/ml4w/scripts/installupdates.sh",
-        "tooltip": false
-    },
-
-    // Theme Starter Label
-    "custom/starter": {
-        "format": "THEME STARTER",
-        "tooltip": false
-    },
-
-    // Wallpaper
-    "custom/wallpaper": {
-        "format": "",
-        "on-click": "waypaper",
-        "on-click-right": "~/.config/hypr/scripts/wallpaper-effects.sh",
-        "tooltip": false
-    },
-
-    // Waybar Themes
-    "custom/waybarthemes": {
-        "format": "",
-        "on-click": "~/.config/waybar/themeswitcher.sh",
-        "tooltip": false
-    },
-
-    // Settings
-    "custom/settings": {
-        "format": "",
-        "on-click": "~/.config/ml4w/apps/ML4W_Dotfiles_Settings-x86_64.AppImage",
-        "tooltip": false
-    },
-
-    // Keybindings
-    "custom/keybindings": {
-        "format": "",
-        "on-click": "~/.config/hypr/scripts/keybindings.sh",
-        "tooltip": false
-    },
-
-    // Filemanager Launcher
-    "custom/filemanager": {
-        "format": "",
-        "on-click": "nautilus",
-        "tooltip": false
-    },
-
-    // Browser Launcher
-    "custom/browser": {
-        "format": "",
-        "on-click": "~/.config/ml4w/settings/browser.sh",
-        "tooltip": false
-    },    
-
-    // ML4W Welcome App
-    "custom/ml4w-welcome": {
-        "on-click": "sleep 0.1 && ~/.config/ml4w/settings/ml4w-sidebar.sh",
-        "on-click-right": "sleep 0.1 && com.ml4w.welcome",
-        "format": " ",
-        "tooltip-format": "Open Sidebar"
-    },
-
-    // ChatGPT Launcher
-    "custom/chatgpt": {
-        "format": "",
-        "on-click": "chromium --app=https://chat.openai.com",
-        "tooltip": false
-    },
-
-    // Rofi Application Launcher
-    "custom/appmenu": {
-        "format": "Apps",
-        "on-click": "rofi -show drun -replace",
-        "on-click-right": "~/.config/hypr/scripts/keybindings.sh",
-        "tooltip": false
-    },
 
     // Power Menu
     "custom/exit": {
         "format": "",
         "on-click": "wlogout",
         "tooltip": false
-    },
-
-    // Keyboard State
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
     },
 
     // System tray
@@ -201,12 +107,6 @@
     "clock": {
         "format": "{:%a %y-%m-%d %H:%M}",
         "on-click": "gnome-calendar",
-        "tooltip": false
-    },
-
-    // System
-    "custom/system": {
-        "format": "",
         "tooltip": false
     },
 
@@ -244,7 +144,6 @@
         "format": "{short}"
     },
 
-
     "group/stats" : {
         "orientation": "horizontal",
         "drawer": {
@@ -269,29 +168,6 @@
         ]
     },
 
-    // Group Settings
-    "group/settings": {
-        "orientation": "inherit",
-        "drawer": {
-            "transition-duration": 300,
-            "children-class": "not-memory",
-            "transition-left-to-right": false
-        },        
-        "modules": [
-            "custom/settings",
-            "custom/waybarthemes",
-            "custom/wallpaper"
-        ]
-    },
-
-    // Group Quicklinks
-    "group/quicklinks": {
-        "orientation": "horizontal",
-        "modules": [
-            "custom/filemanager",
-            "custom/browser"
-        ]
-    },
 
     // Network
     "network": {
@@ -333,7 +209,6 @@
         // "format-full": "",
         "format-icons": [" ", " ", " ", " ", " "],
     },
-
 
     "custom/toggle-conservation": {
         "exec": "sleep 0.2; ~/.config/scripts/toggle-conservation.sh",
@@ -383,13 +258,6 @@
         "format-no-controller": ""
     },
 
-    // Other
-    "user": {
-        "format": "{user}",
-        "interval": 60,
-        "icon": false,
-    },
-
     // Idle Inhibator
     "idle_inhibitor": {
         "format": "{icon}",
@@ -400,6 +268,7 @@
         },
         "on-click-right": "hyprlock"        
     },
+
     "backlight": {
         // "device": "acpi_video1",
         "format": "{icon} {percent}%",
@@ -418,6 +287,7 @@
             "power-saver": " "
         }
     },
+
     "custom/notification": {
         "format": "{icon}",
         "format-icons": {
@@ -436,10 +306,12 @@
         "on-click": "sleep 0.1; swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
     },
+
     "custom/separator" : {
         "format" : "•",
         "tooltip": false,
     },
+
     "custom/drawer-placeholder" : {
         "format" : "󰄽 ",
         "tooltip": false,
