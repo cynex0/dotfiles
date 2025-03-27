@@ -4,7 +4,7 @@ ZSH_THEME="robbyrussell"
 
 plugins=(
   git 
-  zsh-syntax-highlighting 
+  # zsh-syntax-highlighting 
   fast-syntax-highlighting 
   zsh-autosuggestions 
   zsh-autocomplete
@@ -39,7 +39,6 @@ alias 'setcharge'='sudo tlp setcharge 0 1'
 alias 'fullcharge'='sudo tlp fullcharge'
 alias 'waybar-top'='waybar -c ~/.config/waybar/top.jsonc'
 alias 'waybar-bot'='waybar -c ~/.config/waybar/bot.jsonc'
-alias 'vim'='nvim'
 alias protontricks='flatpak run com.github.Matoking.protontricks'
 alias protontricks-launch='flatpak run --command=protontricks-launch com.github.Matoking.protontricks'
 alias air='~/go/bin/air'
@@ -48,6 +47,8 @@ alias untar-gz='tar zxvf'
 alias dotfiles='git --git-dir=$HOME/source/dotfiles --work-tree=$HOME'
 
 
-
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk/
 export PATH=$JAVA_HOME/bin:$PATH
+
+# Created by `pipx` on 2025-03-25 10:07:51
+export PATH="$PATH:/home/cynex/.local/bin"

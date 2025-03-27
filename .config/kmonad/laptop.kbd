@@ -1,0 +1,14 @@
+(defcfg
+  input  (device-file "/dev/input/by-id/usb-ITE_Tech._Inc._ITE_Device_8176_-event-kbd")
+  output (uinput-sink "kmonad")
+  fallthrough true
+  allow-cmd true
+)
+
+(defsrc caps)
+
+(defalias esc-ctrl (tap-next esc lctrl))
+
+(deflayer main
+  @esc-ctrl
+)
