@@ -58,7 +58,7 @@ map('n', '<leader>y', '"+y', { desc = 'Yank to clipboard' })
 map('v', '<leader>y', '"+y', { desc = 'Yank to clipboard' })
 map('n', '<leader>Y', '"+Y', { desc = 'Yank to clipboard' })
 
-map('n', '<leader>n', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Search and replace word' })
+map('n', '<leader>rg', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Grep rename' })
 
 map('n', '<A-p>', '<cmd>cprev<CR>', { desc = 'Quikfix: [p]rev' })
 map('n', '<A-n>', '<cmd>cnext<CR>', { desc = 'Quikfix: [n]ext' })

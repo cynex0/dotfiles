@@ -10,8 +10,6 @@ plugins=(
   zsh-autocomplete
 )
 
-
-
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR='nvim'
@@ -44,7 +42,7 @@ alias protontricks-launch='flatpak run --command=protontricks-launch com.github.
 alias air='~/go/bin/air'
 alias untar='tar xvf'
 alias untar-gz='tar zxvf'
-alias dotfiles='git --git-dir=$HOME/source/dotfiles --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/dotfiles/.git --work-tree=$HOME/dotfiles'
 
 
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk/
