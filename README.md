@@ -24,4 +24,10 @@
 - Wallpaper setter: [`hyprpaper`](https://github.com/hyprwm/hyprpaper)
 
 ## Acknowledgements
-`TODO`
+My desktop environment has been inspired by, and/or uses:
+- [@IonelPopJara](https://github.com/IonelPopJara) and his [dotfiles](https://github.com/IonelPopJara/dotfiles)
+- [ML4W Dotfiles for Hyprland](https://github.com/mylinuxforwork/dotfiles)
+- [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) and [kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvim?tab=readme-ov-file)
+- [midnight](https://github.com/refact0r/midnight-discord/tree/master) discord theme
+
+`TODO:` find original wallpaper author
