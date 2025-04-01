@@ -6,11 +6,11 @@
 
 ---
 ## Showcase
-![Desktop with fastfetch](./source/dotfiles/img/fastfetch.png)
+![Desktop with fastfetch](./img/fastfetch.png)
 
-![Desktop with wofi](./source/dotfiles/img/wofi.png)
+![Desktop with wofi](./img/wofi.png)
 
-![Neovim](./source/dotfiles/img/nvim.png)
+![Neovim](./img/nvim.png)
 
 
 ## Components
@@ -27,8 +27,11 @@
 _Dear future me (probably),_
 
 To install/recover these dotfiles:
+
 0. Make sure `git` and `stow` are installed
-1. `git clone git@github.com:cynex0/dotfiles.git ~/dotfiles`
+1. ```
+    git clone git@github.com:cynex0/dotfiles.git ~/dotfiles
+    ```
 2. ```
     cd ~/dotfiles
     stow .
