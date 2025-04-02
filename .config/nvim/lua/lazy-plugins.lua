@@ -64,6 +64,7 @@ require('lazy').setup({
   require 'custom.plugins.harpoon-tabline',
   -- require 'custom.plugins.minimap',
   require 'custom.plugins.llama',
+  require 'custom.plugins.vim-be-good',
 
   -- Theme
   require 'themes/kanagawa',
