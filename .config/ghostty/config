@@ -22,6 +22,6 @@ selection-background = 2d4f67
 selection-foreground = c8c093
 
 font-family = "CommitMono Nerd Font Mono"
-font-size = 15
+font-size = 14
 
 window-decoration = false
