@@ -65,6 +65,7 @@ require('lazy').setup({
   -- require 'custom.plugins.minimap',
   require 'custom.plugins.llama',
   require 'custom.plugins.vim-be-good',
+  require 'custom.plugins.undotree',
 
   -- Theme
   require 'themes/kanagawa',
