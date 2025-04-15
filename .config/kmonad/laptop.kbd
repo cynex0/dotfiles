@@ -7,7 +7,7 @@
 
 (defsrc caps)
 
-(defalias esc-ctrl (tap-next esc lctrl))
+(defalias esc-ctrl (tap-hold-next 200 esc lctrl))
 
 (deflayer main
   @esc-ctrl
