@@ -43,6 +43,8 @@ alias air='~/go/bin/air'
 alias untar='tar xvf'
 alias untar-gz='tar zxvf'
 alias dotfiles='git --git-dir=$HOME/dotfiles/.git --work-tree=$HOME/dotfiles'
+alias vim='nvim'
+alias winreboot='sudo grub2-reboot "Windows Boot Manager (on /dev/nvme0n1p1)" && sudo reboot'
 
 
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk/
@@ -50,3 +52,16 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 # Created by `pipx` on 2025-03-25 10:07:51
 export PATH="$PATH:/home/cynex/.local/bin"
+
+# bun completions
+[ -s "/home/cynex/.bun/_bun" ] && source "/home/cynex/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# cuda
+export PATH="/usr/local/cuda-12.9/bin:$PATH"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-12.9/lib64"
+export NVCC_CCBIN='g++-13'
+

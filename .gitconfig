@@ -1,0 +1,29 @@
+[user]
+	email = m.orlov10@gmail.com
+	name = Maksims Orlovs
+[push]
+	autoSetupRemote = true
+[diff]
+	tool = nvimdiff
+[merge]
+    tool = nvimdiff
+[mergetool "nvimdiff"]
+  layout = "LOCAL,BASE,REMOTE / MERGED"
+[credential "https://git.chalmers.se"]
+	provider = generic
+[core]
+	commentChar = $
+[alias]
+	config-personal="config --global user.email 'm.orlov10@gmail.com'"
+	config-chalmers="config --global user.email 'orlovs@student.chalmers.se'"
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	amend = commit --amend --no-edit
+	cleanup = !sh -c 'git branch | grep -v "main" | grep -v "master" | xargs git branch -D'
+	fuck-it = !sh -c 'git stash && git stash drop'
+	who="config user.email"
+
+[init]
+	templatedir = ~/.git-templates
+	defaultBranch = main
+[pull]
+	rebase = false
