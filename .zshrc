@@ -39,12 +39,12 @@ alias 'waybar-top'='waybar -c ~/.config/waybar/top.jsonc'
 alias 'waybar-bot'='waybar -c ~/.config/waybar/bot.jsonc'
 alias protontricks='flatpak run com.github.Matoking.protontricks'
 alias protontricks-launch='flatpak run --command=protontricks-launch com.github.Matoking.protontricks'
-alias air='~/go/bin/air'
+alias air='$HOME/go/bin/air'
 alias untar='tar xvf'
 alias untar-gz='tar zxvf'
 alias dotfiles='git --git-dir=$HOME/dotfiles/.git --work-tree=$HOME/dotfiles'
 alias vim='nvim'
-alias winreboot='sudo grub2-reboot "Windows Boot Manager (on /dev/nvme0n1p1)" && sudo reboot'
+alias winreboot='sudo efibootmgr -n $(sudo efibootmgr | grep "Windows Boot Manager" | awk "{print \$1}" | sed "s/Boot//;s/\*//") && sudo reboot'
 
 
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk/
