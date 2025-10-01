@@ -163,6 +163,7 @@
         "orientation": "inherit",
         "modules": [
             "network",
+            "custom/toggle-pia",
             "custom/separator",
             "bluetooth",
         ]
@@ -215,6 +216,16 @@
         "on-click": "sleep 0.2; ~/.config/scripts/toggle-conservation.sh toggle",
         "exec-on-event": false,
         "signal": 13,
+        "tooltip": false,
+        "interval": "once",
+        "return-type": "json",
+    },
+
+    "custom/toggle-pia": {
+        "exec": "sleep 0.2; ~/.config/scripts/toggle-pia.sh",
+        "on-click": "sleep 0.2; ~/.config/scripts/toggle-pia.sh toggle",
+        "exec-on-event": false,
+        "signal": 14,
         "tooltip": false,
         "interval": "once",
         "return-type": "json",

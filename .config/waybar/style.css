@@ -370,6 +370,12 @@ label:focus {
     margin-right: 0px;
 }
 
+#custom-toggle-pia {
+    color: @textcolor1;
+    margin-left: 8;
+    margin-right: 0px;
+}
+
 button:hover {
   box-shadow: none; /* Remove predefined box-shadow */
   text-shadow: none; /* Remove predefined text-shadow */
