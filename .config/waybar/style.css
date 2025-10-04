@@ -372,7 +372,7 @@ label:focus {
 
 #custom-toggle-pia {
     color: @textcolor1;
-    margin-left: 8;
+    margin-left: 8px;
     margin-right: 0px;
 }
 

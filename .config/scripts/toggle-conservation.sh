@@ -30,7 +30,7 @@ fi
 # Determine the text and icon based on the mode
 if [[ "$MODE" == "1" ]]; then
     ICON="󰌪 "
-    TEXT="Conservation mode"
+    TEXT="Conservation"
     CLASS="conservation"
 else
     ICON="󰞕 "

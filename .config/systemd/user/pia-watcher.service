@@ -1,0 +1,11 @@
+[Unit]
+Description=PIA watcher for Waybar
+After=network.target
+
+[Service]
+ExecStart=%h/.config/scripts/pia-watcher.sh
+Restart=always
+
+[Install]
+WantedBy=default.target
+
