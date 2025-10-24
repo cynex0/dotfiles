@@ -29,7 +29,7 @@ autoload -Uz sp
 
 sc() {
   local dir
-  dir=$(rg $HOME/.config/ --hidden --files --no-ignore-vcs --null --glob '!{.git,node_modules,build,dist,target}' | xargs -0 -I {} dirname {} | awk '!x[$0]++' | fzf) && cd "$dir"
+  dir=$(rg $HOME/.config/ --hidden --files --follow --no-ignore-vcs --null | xargs -0 -I {} dirname {} | awk '!x[$0]++' | fzf) && cd "$dir"
 }
 autoload -Uz sc
 
@@ -45,6 +45,7 @@ alias untar-gz='tar zxvf'
 alias dotfiles='git --git-dir=$HOME/dotfiles/.git --work-tree=$HOME/dotfiles'
 alias vim='nvim'
 alias winreboot='sudo efibootmgr -n $(sudo efibootmgr | grep "Windows Boot Manager" | awk "{print \$1}" | sed "s/Boot//;s/\*//") && sudo reboot'
+alias pdf='/usr/bin/zathura > /dev/null 2> /dev/null'
 
 
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk/

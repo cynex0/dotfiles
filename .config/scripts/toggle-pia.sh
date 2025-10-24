@@ -20,7 +20,7 @@ case "$STATE" in
          ICON="󰿇"
       fi
       ;;
-   Connecting|Disconnecting)
+   Connecting|Disconnecting|Reconnecting)
       ICON="󰇘"
       ;;
    *)
