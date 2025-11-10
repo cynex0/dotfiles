@@ -376,6 +376,11 @@ label:focus {
     margin-right: 0px;
 }
 
+#custom-toggle-tailscale {
+    padding-top: 1px;
+    margin-left: 4px;
+}
+
 button:hover {
   box-shadow: none; /* Remove predefined box-shadow */
   text-shadow: none; /* Remove predefined text-shadow */

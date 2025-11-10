@@ -22,7 +22,7 @@
         },
         "persistent-workspaces": {
             "*": 5
-        }       
+        }
     },
 
     // Taskbar
@@ -164,6 +164,7 @@
         "modules": [
             "network",
             "custom/toggle-pia",
+            "custom/toggle-tailscale",
             "custom/separator",
             "bluetooth",
         ]
@@ -221,6 +222,16 @@
         "return-type": "json",
     },
 
+    "custom/toggle-tailscale": {
+        "exec": "sleep 0.2; ~/.config/scripts/toggle-tailscale.sh",
+        "on-click": "sleep 0.2; ~/.config/scripts/toggle-tailscale.sh toggle",
+        "exec-on-event": false,
+        "signal": 15,
+        "tooltip-format": "Tailscale: {alt}",
+        "interval": "once",
+        "return-type": "json",
+    },
+
     "custom/toggle-pia": {
         "exec": "sleep 0.2; ~/.config/scripts/toggle-pia.sh",
         "on-click": "sleep 0.2; ~/.config/scripts/toggle-pia.sh toggle",
@@ -233,7 +244,6 @@
 
     // Pulseaudio
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{format_source} {icon} {volume}%",
         "format-bluetooth": "{format_source} 󰂰 {volume}%",
         "format-bluetooth-muted": "{format_source} 󰝟",
@@ -277,7 +287,7 @@
             "activated": "",
             "deactivated": ""
         },
-        "on-click-right": "hyprlock"        
+        "on-click-right": "hyprlock",
     },
 
     "backlight": {
