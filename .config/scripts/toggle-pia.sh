@@ -1,13 +1,9 @@
 #!/bin/bash
 
-STATE=$(/usr/local/sbin/piactl get connectionstate)
-CLASS="$(echo $STATE | tr '[:upper:]' '[:lower:]')"
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
-if tailscale status >/dev/null 2>&1; then
-   TAILSCALE_UP=1
-else
-   TAILSCALE_UP=0
-fi
+STATE=$($SCRIPT_DIR/helpers/get-pia-status.sh)
+CLASS="$(echo $STATE | tr '[:upper:]' '[:lower:]')"
 
 case "$STATE" in
    Connected)
@@ -20,10 +16,10 @@ case "$STATE" in
       ;;
    Disconnected)
       if [[ "$1" == "toggle" ]]; then
+         TAILSCALE_UP=$($SCRIPT_DIR/helpers/get-tailscale-status.sh)
          if [[ "$TAILSCALE_UP" == "1" ]]; then
             tailscale down
             pkill -RTMIN+15 waybar # notify Tailscale button
-            sleep 0.5
          fi
          /usr/local/sbin/piactl connect
          exit 0

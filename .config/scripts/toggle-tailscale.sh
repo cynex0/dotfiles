@@ -1,13 +1,12 @@
 #!/bin/bash
 
-if tailscale status >/dev/null 2>&1; then
-   UP=1
-else
-   UP=0
-fi
+# TO FUTURE SELF:
+#  this requires ` sudo tailscale set --operator=$USER ` to run without sudo
 
-# disable VPN if connected
-PIA_STATE=$(/usr/local/sbin/piactl get connectionstate)
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+
+UP=$($SCRIPT_DIR/helpers/get-tailscale-status.sh)
+PIA_STATE=$($SCRIPT_DIR/helpers/get-pia-status.sh)
 
 # Toggle mode if the script is run with a toggle argument
 if [[ "$1" == "toggle" ]]; then
@@ -17,11 +16,11 @@ if [[ "$1" == "toggle" ]]; then
       pkill -RTMIN+15 waybar
 
    else
+      # disable VPN if connected
       case "$PIA_STATE" in
          Connected|Connecting)
             /usr/local/sbin/piactl disconnect
             pkill -RTMIN+13 waybar # notify PIA button
-            sleep 0.5
             ;;
       esac
 
