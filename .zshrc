@@ -46,6 +46,7 @@ alias dotfiles='git --git-dir=$HOME/dotfiles/.git --work-tree=$HOME/dotfiles'
 alias vim='nvim'
 alias winreboot='sudo efibootmgr -n $(sudo efibootmgr | grep "Windows Boot Manager" | awk "{print \$1}" | sed "s/Boot//;s/\*//") && sudo reboot'
 alias pdf='/usr/bin/zathura > /dev/null 2> /dev/null'
+alias scratch='nvim $HOME/source/other/scratch/new'
 
 
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk/
@@ -66,3 +67,15 @@ export PATH="/usr/local/cuda-12.9/bin:$PATH"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda-12.9/lib64"
 export NVCC_CCBIN='g++-13'
 
+export GOPATH=$HOME/go
+export PATH="$GOPATH/bin:$PATH"
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
+
+# opencode
+export PATH=/home/cynex/.opencode/bin:$PATH

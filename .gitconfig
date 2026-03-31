@@ -1,6 +1,6 @@
 [user]
-	email = m.orlov10@gmail.com
-	name = Maxine Orlovs
+	email = maxine.orlen@gmail.com
+	name = Maxine Orlen
 [push]
 	autoSetupRemote = true
 [diff]
@@ -14,7 +14,7 @@
 [core]
 	commentChar = $
 [alias]
-	config-personal="config --global user.email 'm.orlov10@gmail.com'"
+	config-personal="config --global user.email 'maxine.orlen@gmail.com'"
 	config-chalmers="config --global user.email 'orlovs@student.chalmers.se'"
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	amend = commit --amend --no-edit

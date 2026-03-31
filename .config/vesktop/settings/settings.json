@@ -45,10 +45,11 @@
             "enabled": true
         },
         "AccountPanelServerProfile": {
-            "enabled": false
+            "enabled": true,
+            "prioritizeServerProfile": false
         },
         "AlwaysAnimate": {
-            "enabled": false
+            "enabled": true
         },
         "AlwaysExpandRoles": {
             "enabled": false
@@ -59,7 +60,11 @@
             "file": true
         },
         "AnonymiseFileNames": {
-            "enabled": false
+            "enabled": true,
+            "anonymiseByDefault": true,
+            "method": 2,
+            "randomisedLength": 7,
+            "consistent": "image"
         },
         "AppleMusicRichPresence": {
             "enabled": false
@@ -71,13 +76,21 @@
             "enabled": false
         },
         "BetterFolders": {
-            "enabled": false
+            "enabled": false,
+            "sidebar": true,
+            "showFolderIcon": 1,
+            "keepIcons": false,
+            "closeAllHomeButton": false,
+            "closeAllFolders": false,
+            "forceOpen": false,
+            "sidebarAnim": true,
+            "closeOthers": false
         },
         "BetterGifAltText": {
             "enabled": false
         },
         "BetterGifPicker": {
-            "enabled": false
+            "enabled": true
         },
         "BetterNotesBox": {
             "enabled": false
@@ -141,7 +154,9 @@
             "enabled": false
         },
         "CustomIdle": {
-            "enabled": false
+            "enabled": true,
+            "idleTimeout": 15.379061371841154,
+            "remainInIdle": false
         },
         "Dearrow": {
             "enabled": false
@@ -186,10 +201,11 @@
             "enabled": false
         },
         "FixSpotifyEmbeds": {
-            "enabled": false
+            "enabled": true,
+            "volume": 10
         },
         "FixYoutubeEmbeds": {
-            "enabled": false
+            "enabled": true
         },
         "ForceOwnerCrown": {
             "enabled": false
@@ -249,7 +265,8 @@
         "MemberCount": {
             "enabled": true,
             "memberList": true,
-            "toolTip": true
+            "toolTip": true,
+            "voiceActivity": true
         },
         "MentionAvatars": {
             "enabled": false
@@ -264,9 +281,6 @@
             "enabled": false
         },
         "MessageLogger": {
-            "enabled": false
-        },
-        "MessageTags": {
             "enabled": false
         },
         "MoreCommands": {
@@ -327,7 +341,8 @@
             "enabled": false
         },
         "NotificationVolume": {
-            "enabled": false
+            "enabled": true,
+            "notificationVolume": 75.09025270758123
         },
         "NSFWGateBypass": {
             "enabled": false
@@ -458,7 +473,7 @@
         "SpotifyCrack": {
             "enabled": true,
             "noSpotifyAutoPause": true,
-            "keepSpotifyActivityOnIdle": false
+            "keepSpotifyActivityOnIdle": true
         },
         "SpotifyShareCommands": {
             "enabled": false
@@ -543,7 +558,8 @@
             "enabled": true
         },
         "WebScreenShareFixes": {
-            "enabled": true
+            "enabled": true,
+            "experimentalAV1Support": false
         },
         "WhoReacted": {
             "enabled": false
@@ -585,6 +601,21 @@
             "enabled": true
         },
         "ExpressionCloner": {
+            "enabled": true
+        },
+        "CopyStickerLinks": {
+            "enabled": false
+        },
+        "ImageFilename": {
+            "enabled": false
+        },
+        "MoreQuickReactions": {
+            "enabled": false
+        },
+        "CustomCommands": {
+            "enabled": false
+        },
+        "NoDefaultHangStatus": {
             "enabled": false
         }
     },
@@ -595,10 +626,14 @@
         "logLimit": 50
     },
     "cloud": {
-        "authenticated": false,
+        "authenticated": true,
         "url": "https://api.vencord.dev/",
-        "settingsSync": false,
-        "settingsSyncVersion": 1748607440274
+        "settingsSync": true,
+        "settingsSyncVersion": 1774096486174
     },
-    "eagerPatches": false
+    "eagerPatches": false,
+    "uiElements": {
+        "chatBarButtons": {},
+        "messagePopoverButtons": {}
+    }
 }
