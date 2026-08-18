@@ -1,0 +1,34 @@
+_git_repo_name() {
+  local toplevel gitdir
+  toplevel=$(git rev-parse --show-toplevel 2>/dev/null) || return
+  gitdir=$(cd "$toplevel" && git rev-parse --git-common-dir 2>/dev/null) || return
+  [[ "$gitdir" != /* ]] && gitdir="$toplevel/$gitdir"
+  echo "$(basename "$(dirname "${gitdir:A}")") "
+}
+
+git_prompt_info() {
+  local ref
+  ref=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null) || return
+  local repo=$(_git_repo_name)
+  echo "${ZSH_THEME_GIT_PROMPT_PREFIX}%{$fg[red]%}${ref}$(parse_git_dirty)${ZSH_THEME_GIT_PROMPT_SUFFIX}"
+}
+
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$(brew --prefix python)/libexec/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+wthop() {
+  local current_root=$(git rev-parse --show-toplevel 2>/dev/null) || { echo "Not in a git repo"; return 1; }
+  local rel=${PWD#"$current_root"}
+  local target=$(git worktree list --porcelain | awk '/^worktree /{print $2}' | grep -v "^$current_root$" | fzf --prompt="worktree> ")
+  [[ -z "$target" ]] && return
+  if [[ -d "$target$rel" ]]; then
+    cd "$target$rel"
+  else
+    echo "Path doesn't exist in target, cd'ing to root"
+    cd "$target"
+  fi
+}
